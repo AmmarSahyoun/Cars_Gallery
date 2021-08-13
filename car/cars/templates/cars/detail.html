@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Car: {{car.type}}</title>
+</head>
+<body>
+<h1>{{car.type}}</h1>
+<p>
+    This car has a model <strong>{{car.model}}</strong>, year <strong>{{car.year.year}}</strong>.
+    , owned by <strong>{{car.owner.name}}</strong>.
+</p>
+
+ <a href="{% url 'welcome' %}">Home</a>
+</body>
+</html>
