@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+</head>
+
+
+<body>
+    <div>
+        <img src="{% static 'website/car.png' %}" width="100px">
+        <h1>Welcome to the Gallery!</h1>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
