@@ -4,17 +4,17 @@
 {% block content %}
 
 
-
-<h3>The cars are:</h3>
-<ul>
-    {% for car in cars_ob %}
-    <li>
-        <a href="{% url 'detail' car.id %}">
-            {{ car.type }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-<a href="{% url 'owners' %}"><strong>The owners</strong></a>
+<div style="width:800px; margin:0 auto;">
+    <h3>The gallery cars are:</h3>
+    <ul>
+        {% for car in cars_ob %}
+        <li>
+            <a href="{% url 'detail' car.id %}">
+                {{ car.type }} {{ car.model }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</>
 
 {% endblock %}

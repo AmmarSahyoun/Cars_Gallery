@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}New Car{% endblock %}
+{% block content %}
+
+<div style="width:800px; margin:0 auto; margin-top: 55px;">
+    <h3> Add a new car</h3>
+    <form method="post">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+{% endblock %}

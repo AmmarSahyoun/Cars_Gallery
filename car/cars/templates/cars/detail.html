@@ -3,13 +3,14 @@
 {% block title %}Welcome{% endblock %}
 {% block content %}
 
-<h1>{{car.type}}</h1>
-<p>
-    This car has a model <strong>{{car.model}}</strong>, year <strong>{{car.year.year}}</strong>.
-    , owned by <strong>{{car.owner.name}}</strong>.
-</p>
+<div style="width:800px; margin:0 auto; margin-top: 55px;">
+    <h1>{{car.type}}</h1>
+    <p>
+        This car has a model <strong>{{car.model}}</strong>, year <strong>{{car.year.year}}</strong>.
+        , owned by <strong>{{car.owner.name}}</strong>.
+    </p>
 
- <a href="{% url 'welcome' %}">Home</a>
 
 
+</div>
 {% endblock %}
