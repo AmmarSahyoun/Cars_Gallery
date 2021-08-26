@@ -4,9 +4,12 @@
 {% block content %}
 
 <div style="width:800px; margin:0 auto; margin-top: 55px;">
-    <h1>{{car.type}}</h1>
+    <h3>{{car.type}} {{car.model}}</h3>
+
+    <img src="{{ car.image.url }}" width="200px"/>
+
     <p>
-        This car has a model <strong>{{car.model}}</strong>, year <strong>{{car.year.year}}</strong>.
+        This car has a model year <strong>{{car.year}}</strong>.
         , owned by <strong>{{car.owner.name}}</strong>.
     </p>
 

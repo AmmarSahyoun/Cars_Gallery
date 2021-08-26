@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Car, Owner
-from django.http import HttpResponse
 from .forms import MeetingForm
+
 
 def detail(request, id):
     car = get_object_or_404(Car, pk=id)
@@ -9,7 +9,6 @@ def detail(request, id):
 
 def owner_list(request):
     return render(request, "cars/list_of_owners.html", {"owner_ob": Owner.objects.all()})
-
 
 
 def new(request):
@@ -25,3 +24,9 @@ def new(request):
 
 def about(request):
     return render(request, "cars/about.html")
+
+
+def owner_cars(request, id):
+    #o_cars = Car.objects.get(owner=id)
+    o_cars = get_object_or_404(Car, owner=id)
+    return render(request, "cars/owner_cars.html", {"o_cars": o_cars})
