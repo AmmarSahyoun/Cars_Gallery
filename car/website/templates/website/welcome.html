@@ -9,12 +9,12 @@
     <ul>
         {% for car in cars_ob %}
         <li>
-            <a href="{% url 'detail' car.id %}">
+            <a href="{% url 'detail_name' car.id %}">
                 {{ car.type }} {{ car.model }}
             </a>
         </li>
         {% endfor %}
     </ul>
-</>
+</div>
 
 {% endblock %}
