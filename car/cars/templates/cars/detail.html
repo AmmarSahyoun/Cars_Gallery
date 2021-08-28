@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}Welcome{% endblock %}
+{% block title %}Detail{% endblock %}
 {% block content %}
 
-<div style="width:800px; margin:0 auto; margin-top: 55px;">
+<div style="width:800px; margin:0 auto; margin-top: 85px;">
     <h3>{{car.type}} {{car.model}}</h3>
 
     <img src="{{ car.image.url }}" width="200px"/>
 
     <p>
-        This car has a model year <strong>{{car.year}}</strong>.
-        , owned by <strong>{{car.owner.name}}</strong>.
+        This car has a model year <strong>{{car.year}}</strong>,
+         owned by <strong>{{car.owner.name}}</strong>.
     </p>
 
 

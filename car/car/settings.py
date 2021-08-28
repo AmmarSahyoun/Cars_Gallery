@@ -126,11 +126,13 @@ STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_ROOT = STATIC_ROOT / 'media'
 MEDIA_URL = '/media/'
 
+OWM_API = 'e94d3a2066abd42e025f891dd70f9b19'
+
 
 # Log all SQL
-LOGGING = {
-    "version": 1,
-    "handlers": {"console": {"class": "logging.StreamHandler"}},
-    "loggers": {"django.db.backends": {"level": "DEBUG"}},
-    "root": {"handlers": ["console"]},
-}
+# LOGGING = {
+#     "version": 1,
+#     "handlers": {"console": {"class": "logging.StreamHandler"}},
+#     "loggers": {"django.db.backends": {"level": "DEBUG"}},
+#     "root": {"handlers": ["console"]},
+# }

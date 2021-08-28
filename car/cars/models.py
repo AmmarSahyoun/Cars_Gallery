@@ -17,5 +17,8 @@ class Car(models.Model):
     image = models.ImageField()
     owner = models.ForeignKey(Owner, on_delete=models.CASCADE)
 
+    class Meta:
+        ordering = ['model']
+
     def __str__(self):
         return f"{self.type}, {self.model}, made on {self.year}"

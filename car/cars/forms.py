@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 
 from .models import Car
 
-
+''' add special configuration to help validate the form'''
 class MeetingForm(ModelForm):
     class Meta:
         model = Car
@@ -12,7 +12,7 @@ class MeetingForm(ModelForm):
         widgets = {
             'type': TextInput(attrs={"type": "text"}),
             'model': TextInput(attrs={"type": "text"}),
-            'year': DateInput(attrs={"type": "date"})
+            'year': DateInput(attrs={"type": "year"})
         }
 
     def clean_date(self):

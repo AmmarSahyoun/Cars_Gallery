@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from cars.models import Car
+from django.conf import settings
+import requests
 
-
-def welcome(request):
-    return render(request, 'website/welcome.html',
+def index(request):
+    return render(request, 'website/index.html',
                   {'cars_ob':Car.objects.all()})
+
+
