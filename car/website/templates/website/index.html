@@ -5,16 +5,18 @@
 
 
 <div class="body">
-    <h3 style="color: gray;">The gallery cars are:</h3>
-    <ul>
-        {% for car in cars_ob %}
-        <li>
-            <a href="{% url 'detail_name' car.id %}">
-                {{ car.type }} {{ car.model }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    <div style="margin: auto; width:80%; padding:50px;color:white;">
+        <h3 style="color: gray;">The gallery cars are:</h3>
+        <ul>
+            {% for car in cars_ob %}
+            <li>
+                <a href="{% url 'detail_name' car.id %}">
+                    {{ car.type }} {{ car.model }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 
 {% endblock %}
