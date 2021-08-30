@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Welcome{% endblock %}
+{% block title %}Index{% endblock %}
 {% block content %}
 
 
-<div style="width:800px; margin:0 auto;">
-    <h3>The gallery cars are:</h3>
+<div class="body">
+    <h3 style="color: gray;">The gallery cars are:</h3>
     <ul>
         {% for car in cars_ob %}
         <li>
