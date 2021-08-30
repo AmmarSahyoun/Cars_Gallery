@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Car, Owner
-from .forms import MeetingForm
+from .forms import CarForm
 
 
 def detail(request, id):
@@ -13,12 +13,12 @@ def owner_list(request):
 
 def new(request):
     if request.method == "POST":
-        form = MeetingForm(request.POST)
+        form = CarForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("welcome")
     else:
-        form = MeetingForm()
+        form = CarForm()
     return render(request, "cars/new.html", {"form": form})
 
 

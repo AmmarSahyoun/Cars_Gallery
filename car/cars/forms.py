@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from .models import Car
 
 ''' add special configuration to help validate the form'''
-class MeetingForm(ModelForm):
+class CarForm(ModelForm):
     class Meta:
         model = Car
         fields = '__all__'
