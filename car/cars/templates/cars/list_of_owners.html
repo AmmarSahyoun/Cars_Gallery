@@ -23,9 +23,9 @@
     <ul>
         {% for owner in owner_ob %}
         <li>
-
+        <a href="{% url 'o_cars' owner.id %}">
             {{ owner.name}}
-
+        </a>
         </li>
         {% endfor %}
     </ul>

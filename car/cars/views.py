@@ -32,10 +32,9 @@ def about(request):
 
 
 def owner_cars(request, id):
-    #o_cars = Car.objects.get(owner=id)
-    o_cars = get_object_or_404(Car, owner=id)
-    return render(request, "cars/owner_cars.html", {"o_cars": o_cars})
-
+    owner = Owner.objects.get(id=id)
+    o_cars =  owner.car_set.all()
+    return render(request, "cars/owner_cars.html", {'owner':owner, "o_cars": o_cars})
 
 
 def registerPage(request):
@@ -44,7 +43,6 @@ def registerPage(request):
     else:
 
         form = CreateUserForm()
-
         if request.method == "POST":
             form = CreateUserForm(request.POST)
 

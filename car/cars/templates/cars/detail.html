@@ -3,7 +3,23 @@
 {% block title %}Detail{% endblock %}
 {% block content %}
 
-<div style="width:800px; margin:0 auto; margin-top: 85px;">
+
+<style>
+    html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #3C4040 !important;
+		}
+		body {
+  background: #3C4040 !important;
+    font-family:sans-serif;
+    color: gray;
+    margin-top: 35px;
+}
+</style>
+
+<div style="width:800px; margin:0 auto; padding:60px; margin-top: 85px;">
     <h3>{{car.type}} {{car.model}}</h3>
 
     <img src="{{ car.image.url }}" width="200px"/>
