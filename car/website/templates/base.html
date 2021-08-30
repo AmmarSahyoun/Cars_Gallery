@@ -19,6 +19,9 @@
         <a href="{% url 'welcome' %}" class="navbar-brand">
             <img src="/static/website/logo.jpg" height="40px">
         </a>
+        <span style="font-size : 18px; color: #fff; margin-left: 10px"> Welcome {{request.user}},</span>
+        <span> <a style="font-size : 18px; color: #fff; margin-left: 10px" href="{% url 'logout' %}"> Logout</a></span>
+
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false"
@@ -34,13 +37,6 @@
         </div>
     </div>
 </nav>
-
-<div>
-    <div>
-        <h1></h1>
-    </div>
-</div>
-<br>
 {% block content %}
 {% endblock %}
 </body>
