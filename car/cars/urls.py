@@ -10,4 +10,7 @@ urlpatterns = [
     path('about',views.about, name='about'),
     #path('owner/<int:id>', views.owner_cars, name='o_cars'),
 
+    path('register/', views.registerPage, name='register'),
+    path('login/', views.loginPage, name='login'),
+    path('logout/', views.logoutUser, name='logout'),
 ]
