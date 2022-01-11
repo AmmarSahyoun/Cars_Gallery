@@ -39,6 +39,7 @@ def owner_cars(request, id):
 
 def registerPage(request):
     if request.user.is_authenticated :
+
         return redirect('welcome')
     else:
 
